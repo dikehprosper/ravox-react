@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Modal from '../utils/Modal';
-
+import { Link } from 'react-router-dom';
 import HeroImage from '../images/favicon.png';
 
 function HeroHome() {
@@ -44,12 +44,12 @@ function HeroHome() {
             based on a proof-of-stake consensus mechanism that allows users to stake their tokens to secure the network and earn rewards.
             </p>
             <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
-              <div data-aos="fade-up" data-aos-delay="400">
+             <Link to="/staking"> <div data-aos="fade-up" data-aos-delay="400">
                 <a className="btn text-white bg-purple-600 hover:bg-purple-1000 w-full mb-4 sm:w-auto sm:mb-0" href="#0">
                   Stake Now
                 </a>
-              </div>
-              <div data-aos="fade-up" data-aos-delay="600">
+              </div></Link>
+                <div data-aos="fade-up" data-aos-delay="600">
                 <a className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4" href="#0">
                   Buy Now
                 </a>
@@ -108,18 +108,18 @@ function HeroHome() {
           </div>
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
             <h1 className="h1 mb-4" data-aos="fade-up">
-              Ravox Staking
+              Ravox 
             </h1>
             <p className="text-xl1 text-gray-400 mb-8 text-align-center" data-aos="fade-up" data-aos-delay="200">
             Ravox is designed to revolutionize the industry with a unique staking utility. Our token is 
             based on a proof-of-stake consensus mechanism that allows users to stake their tokens to secure the network and earn rewards.
             </p>
             <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
-              <div data-aos="fade-up" data-aos-delay="400">
+            <Link to="/staking"> <div data-aos="fade-up" data-aos-delay="400">
                 <a className="btn text-white bg-purple-600 hover:bg-purple-white hover:text-purple-600  w-full mb-4 sm:w-auto sm:mb-0" href="#0">
                   Stake Now
                 </a>
-              </div>
+              </div></Link>
               <div data-aos="fade-up" data-aos-delay="600">
                 <a className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4" href="#0">
                   Buy Now

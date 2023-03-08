@@ -4,13 +4,14 @@ import Header from '../partials/Header';
 import PageIllustration from '../partials/PageIllustration';
 import HeroHome from '../partials/HeroHome';
 import FeaturesBlocks from '../partials/FeaturesBlocks';
+import FeaturesBlocks2 from '../partials/FeatutesBlocks2';
 import FeaturesZigZag from '../partials/FeaturesZigzag';
 
 import Newsletter from '../partials/Newsletter';
 
 import Footer from '../partials/Footer';
 
-function Home() {
+function Staking() {
   return (
     <div className="flex flex-col min-h-screen overflow-hidden">
       {/*  Site header */}
@@ -23,10 +24,9 @@ function Home() {
           <PageIllustration />
         </div>
 
-        {/*  Page sections */}
-         <HeroHome />
-         {/* <FeaturesBlocks />
-        <FeaturesZigZag /> */}
+       
+         <FeaturesBlocks2 />
+        
       
         <Newsletter />  
       </main>
@@ -39,4 +39,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Staking;
