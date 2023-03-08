@@ -71,9 +71,11 @@ function Header() {
              
               <li>
                 <Link to="" className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out">staking</Link>
-              </li> <li>
+              </li> 
+              
+              {/* <li>
                 <Link to="" className="btn-sm text-purple-600 hover:text-white hover:bg-purple-600 px-4 py-3 flex items-center transition duration-150 ease-in-out">Stake</Link>
-              </li>
+              </li> */}
 
             </ul>
 
@@ -103,10 +105,10 @@ function Header() {
                   <Link to="" className="font-medium w-full inline-flex items-center justify-center border border-transparent px-4 py-2 my-2 rounded-sm text-white hover:bg-purple-700 transition duration-150 ease-in-out" style={{color:"#704094"}}>staking</Link>
                 </li>
               <li>
-                <Link to="" className="btn-sm text-white bg-purple-600 hover:text-white hover:bg-purple-600 px-4 py-3 flex items-center transition duration-150 ease-in-out"> Stake Now</Link>
+                <Link to="" className="btn-sm text-purple-600  hover:text-white hover:bg-purple-600 px-4 py-3 flex items-center transition duration-150 ease-in-out"> Stake Now</Link>
               </li>
               <li>
-                <Link to="" className="btn-sm text-white bg-purple-600 hover:text-white hover:bg-purple-600 px-4 py-3 flex items-center transition duration-150 ease-in-out"> Buy Now</Link>
+                <Link to="" className="btn-sm text-white bg-gray-700 hover:bg-gray-800 hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"> Buy Now</Link>
               </li>
                 
               </ul>
