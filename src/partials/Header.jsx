@@ -7,7 +7,68 @@ function Header() {
 
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   
-   
+  const [errorMessage, setErrorMessage] = useState(null);
+  const [account, setAccount] = useState(null);
+  const [balance, setBalance] = useState(null);
+
+
+  Balance: {balance} {balance ? "ETH" : null};
+  Account: {account};
+  {errorMessage ? (
+    <div variant="body1" color="red">
+      Error: {errorMessage}
+    </div>
+  ) : null};
+
+ 
+  
+
+  console.log(balance);
+  console.log(account);
+  console.log(errorMessage);
+
+  useEffect(() => {
+    if (window.ethereum) {
+      window.ethereum.on("accountsChanged", accountsChanged);
+      window.ethereum.on("chainChanged", chainChanged);
+    }
+  }, []);
+
+  const connectHandler = async () => {
+    if (window.ethereum) {
+      try {
+        const res = await window.ethereum.request({
+          method: "eth_requestAccounts",
+        });
+        await accountChange(res[0]);
+      } catch (err) {
+        console.error(err);
+        setErrorMessage("There was a problem connecting to MetaMask");
+      }
+    } else {
+      setErrorMessage("Install MetaMask");
+    }
+  };
+
+  const accountsChanged = async (newAccount) => {
+    setAccount(newAccount);
+    try {
+      const balance = await window.ethereum.request({
+        method: "eth_getBalance",
+        params: [newAccount.toString(), "latest"],
+      });
+      setBalance(ethers.utils.formatEther(balance));
+    } catch (err) {
+      console.error(err);
+      setErrorMessage("There was a problem connecting to MetaMask");
+    }
+  };
+
+  const chainChanged = () => {
+    setErrorMessage(null);
+    setAccount(null);
+    setBalance(null);
+  };
     
 
   const trigger = useRef(null);
@@ -83,7 +144,7 @@ function Header() {
           </nav>
 
           {/* Mobile menu */}
-          <div style={{ marginLeft:"85px",  color:"white", backgroundColor:"#704094", padding:"6px", borderRadius:"4px", fontWeight:'bold'}}>Connect </div>
+          <div style={{ marginLeft:"85px",  color:"white", backgroundColor:"#704094", padding:"6px", borderRadius:"4px", fontWeight:'bold'}} onClick={connectHandler}>{ account? "Connected" : "Connect"} </div>
          
           <div className="md:hidden flex align-start justify-center">
           {/* Hamburger button */}
@@ -112,9 +173,7 @@ function Header() {
               <li>
                 <Link to="/staking" className="btn-sm text-purple-600  hover:text-purple-600 hover:bg-white px-4 py-3 flex items-center transition duration-150 ease-in-out">Buy Now</Link>
               </li>
-              <li>
-                <Link to="" className="btn-sm text-white bg-gray-700 hover:bg-gray-800 hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"> Connect</Link>
-              </li>
+            
                 
               </ul>
             </nav>

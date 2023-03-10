@@ -3,6 +3,10 @@ import zz from "../images/favicon.png";
 import { GiCheckMark } from "react-icons/gi";
 
 function FeaturesBlocks() {
+  function click(){
+alert("You don't have enough $Ravox to stake")
+  }
+
   return (
     <section>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -98,6 +102,7 @@ function FeaturesBlocks() {
                     cursor: "pointer",
                     width: "100%",
                   }}
+                  onClick={click}
                 >
                   STAKE NOW
                 </div>
@@ -183,6 +188,7 @@ function FeaturesBlocks() {
                     cursor: "pointer",
                     width: "100%",
                   }}
+                  onClick={click}
                 >
                 STAKE NOW
                 </div>
@@ -269,6 +275,7 @@ function FeaturesBlocks() {
                     cursor: "pointer",
                     width: "100%",
                   }}
+                  onClick={click}
                 >
                   STAKE NOW
                 </div>
