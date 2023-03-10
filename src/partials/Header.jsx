@@ -77,9 +77,6 @@ function Header() {
                 <Link to="/roadmap" className="btn-sm text-purple-600 hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out">Roadmap</Link>
               </li> 
 
-              <li>
-                <Link to="" className="btn-sm text-purple-600 hover:text-white hover:bg-purple-600 px-4 py-3 flex items-center transition duration-150 ease-in-out">Connect</Link>
-              </li>
              
             </ul>
 

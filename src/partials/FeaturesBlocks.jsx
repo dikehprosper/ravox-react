@@ -1,11 +1,12 @@
-import React from 'react';
+import React from "react";
+import zz from "../images/favicon.png";
+import { GiCheckMark } from "react-icons/Gi";
 
 function FeaturesBlocks() {
   return (
     <section>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="py-12 md:py-20">
-
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
             <h2 className="h2 mb-4">Staking Plans</h2>
@@ -13,41 +14,266 @@ function FeaturesBlocks() {
           </div>
 
           {/* Items */}
-          <div className="max-w-sm mx-auto grid gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-16 items-start md:max-w-2xl lg:max-w-none" data-aos-id-blocks>
-
+          <div
+            className="max-w-sm mx-auto grid gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-16 items-start md:max-w-2xl lg:max-w-none"
+            data-aos-id-blocks
+          >
             {/* 1st item */}
-             <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-anchor="[data-aos-id-blocks]">
-          
-             <div style={{fontWeight:"bold",fontSize:"25px ,", borderRadius:"30px",display:"flex", justifyContent:"center",marginBottom:"15px", alignItems:"center"}}>3% APR</div>
-              <h5 className="h5 mb-4">7 Days</h5> 
+            <div
+              style={{
+                padding: "10px",
+                backgroundColor: "#33363A",
+                borderRadius: "6px",
+              }}
+            >
+              <div
+                className="relative flex flex-col items-start"
+                data-aos="fade-up"
+                data-aos-anchor="[data-aos-id-blocks]"
+              >
+                <div
+                  style={{
+                    fontWeight: "bold",
+                    fontSize: "20px, ",
+                    borderRadius: "30px",
+                    display: "flex",
+                    justifyContent: "center",
+                    marginBottom: "15px",
+                    alignItems: "center",
+                  }}
+                >
+                  {" "}
+                  <img
+                    src={zz}
+                    alt=""
+                    srcset=""
+                    height="35px"
+                    width="35px"
+                  />{" "}
+                  &nbsp; Ravox &nbsp;&nbsp;{" "}
+                  <span
+                    style={{
+                      color: "lightgreen",
+                      fontWeight: "bold",
+                      fontSize: "16px",
+                    }}
+                  >
+                    3.00%
+                  </span>{" "}
+                </div>
+                <p style={{ fontSize: "10px", fontWeight: "bold" }}>Duration</p>
+                <div
+                  style={{
+                    position: "relative",
+                    width: "80px",
+                    height: "35px",
+                    backgroundColor: "#704094",
+                    marginTop: "10px",
+                    display: "flex",
+                    justifyContent: "end",
+                    paddingRight:"2.5px",
+                    paddingTop:"2.5px",
+                    borderRadius: "4px",
+                    
+                  }}
+                >
+                  <GiCheckMark fontSize="6.65px" />
+                  <div style={{ position: "absolute",borderRadius: "4px",border:"1.5px solid #704094", WebkitClipPath:
+                      "polygon(0 0, 0 100%, 100% 100%, 100% 40%, 75% 0)",
+                    ClipPath:
+                      "polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0)", left:"0", top:"0",bottom:"0", display:"flex",fontSize:"12px", justifyContent:"center", alignItems:"center", fontWeight:"bold",  width:"100%", backgroundColor:"#33363A" }}> 7 Days</div>
+                </div>
+                <div
+                  style={{
+                    fontWeight: "bold",
+                    fontSize: "14px",
+                    height: "45px",
+                    borderRadius: "5px",
+                    backgroundColor: "#704094",
+                    display: "flex",
+                    justifyContent: "center",
+                    marginBottom: "5px",
+                    marginTop: "30px",
+                    alignItems: "center",
+                    cursor: "pointer",
+                    width: "100%",
+                  }}
+                >
+                  SUBSCRIBE
+                </div>
+              </div>
+            </div>
 
-              <p className="text-lg text-gray-400 text-center">Stake your RVX tokens for a period of <span style={{fontWeight:"bold",color:"white"}}>7-Days</span>  in a staking contract to help secure 
-              the Ravox network and receive a reward of <span style={{fontWeight:"bold", color:"white"}}>3%</span> of your staked tokens at the end of the <span style={{fontWeight:"bold", color:"white"}}>7-Days</span>  period. </p>
-            
-              <div style={{fontWeight:"bold",fontSize:"22px", height:"45px", width:"170px", borderRadius:"5px", backgroundColor:"#704094", display:"flex", justifyContent:"center",marginBottom:"20px",marginTop:"30px", alignItems:"center",cursor:"pointer"}} >SUBSCRIBE</div>
-            </div> 
+            <div
+              style={{
+                padding: "10px",
+                backgroundColor: "#33363A",
+                borderRadius: "6px",
+              }}
+            >
+              <div
+                className="relative flex flex-col items-start"
+                data-aos="fade-up"
+                data-aos-anchor="[data-aos-id-blocks]"
+              >
+                <div
+                  style={{
+                    fontWeight: "bold",
+                    fontSize: "20px ,",
+                    borderRadius: "30px",
+                    display: "flex",
+                    justifyContent: "center",
+                    marginBottom: "15px",
+                    alignItems: "center",
+                  }}
+                >
+                  {" "}
+                  <img
+                    src={zz}
+                    alt=""
+                    srcset=""
+                    height="35px"
+                    width="35px"
+                  />{" "}
+                  &nbsp; Ravox &nbsp;&nbsp;{" "}
+                  <span
+                    style={{
+                      color: "lightgreen",
+                      fontWeight: "bold",
+                      fontSize: "16px",
+                    }}
+                  >
+                    13.00%
+                  </span>{" "}
+                </div>
+                <p style={{ fontSize: "10px", fontWeight: "bold" }}>Duration</p>
+                <div
+                  style={{
+                    position: "relative",
+                    width: "80px",
+                    height: "35px",
+                    backgroundColor: "#704094",
+                    marginTop: "10px",
+                    display: "flex",
+                    justifyContent: "end",
+                    paddingRight:"2.5px",
+                    paddingTop:"2.5px",
+                    borderRadius: "4px",
+                    
+                  }}
+                >
+                  <GiCheckMark fontSize="6.65px" />
+                  <div style={{ position: "absolute",borderRadius: "4px",border:"1.5px solid #704094", WebkitClipPath:
+                      "polygon(0 0, 0 100%, 100% 100%, 100% 40%, 75% 0)",
+                    ClipPath:
+                      "polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0)", left:"0", top:"0",bottom:"0", display:"flex",fontSize:"12px", justifyContent:"center", alignItems:"center", fontWeight:"bold",  width:"100%", backgroundColor:"#33363A" }}> 30 Days</div>
+                </div>
+                <div
+                  style={{
+                    fontWeight: "bold",
+                    fontSize: "14px",
+                    height: "45px",
+                    borderRadius: "5px",
+                    backgroundColor: "#704094",
+                    display: "flex",
+                    justifyContent: "center",
+                    marginBottom: "5px",
+                    marginTop: "30px",
+                    alignItems: "center",
+                    cursor: "pointer",
+                    width: "100%",
+                  }}
+                >
+                  SUBSCRIBE
+                </div>
+              </div>
+            </div>
 
-            {/* 2nd item */}
-             <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-delay="100" data-aos-anchor="[data-aos-id-blocks]">
-           
-             <div style={{fontWeight:"bold",fontSize:"25px", borderRadius:"30px",display:"flex", justifyContent:"center",marginBottom:"15px", alignItems:"center"}}>13% APR</div>
-            
-              <h5 className="h5 mb-4">30 Days</h5>
-              <p className="text-lg text-gray-400 text-center">Stake your RVX tokens for a period of <span style={{fontWeight:"bold",color:"white"}}>30-Days</span>  in a staking contract to help secure 
-              the Ravox network and receive a reward of <span style={{fontWeight:"bold", color:"white"}}>13%</span> of your staked tokens at the end of the <span style={{fontWeight:"bold", color:"white"}}>30-Days</span>  period. </p>
-             <div style={{fontWeight:"bold",fontSize:"22px", height:"45px", width:"170px", borderRadius:"5px", backgroundColor:"#704094", display:"flex", justifyContent:"center",marginBottom:"20px",marginTop:"30px", alignItems:"center",cursor:"pointer"}} >SUBSCRIBE</div>
-            </div> 
+            <div
+              style={{
+                padding: "10px",
+                backgroundColor: "#33363A",
+                borderRadius: "6px",
+              }}
+            >
+              <div
+                className="relative flex flex-col items-start"
+                data-aos="fade-up"
+                data-aos-anchor="[data-aos-id-blocks]"
+              >
+                <div
+                  style={{
+                    fontWeight: "bold",
+                    fontSize: "20px ,",
+                    borderRadius: "30px",
+                    display: "flex",
+                    justifyContent: "center",
+                    marginBottom: "15px",
+                    alignItems: "center",
+                  }}
+                >
+                  {" "}
+                  <img
+                    src={zz}
+                    alt=""
+                    srcset=""
+                    height="35px"
+                    width="35px"
+                  />{" "}
+                  &nbsp; Ravox &nbsp;&nbsp;{" "}
+                  <span
+                    style={{
+                      color: "lightgreen",
+                      fontWeight: "bold",
+                      fontSize: "16px",
+                    }}
+                  >
+                    40.00%
+                  </span>{" "}
+                </div>
+                <p style={{ fontSize: "10px", fontWeight: "bold" }}>Duration</p>
+                <div
+                  style={{
+                    position: "relative",
+                    width: "80px",
+                    height: "35px",
+                    backgroundColor: "#704094",
+                    marginTop: "10px",
+                    display: "flex",
+                    justifyContent: "end",
+                    paddingRight:"2.5px",
+                    paddingTop:"2.5px",
+                    borderRadius: "4px",
+                    
+                  }}
+                >
+                  <GiCheckMark fontSize="6.65px" />
+                  <div style={{ position: "absolute",borderRadius: "4px",border:"1.5px solid #704094", WebkitClipPath:
+                      "polygon(0 0, 0 100%, 100% 100%, 100% 40%, 75% 0)",
+                    ClipPath:
+                      "polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0)", left:"0", top:"0",bottom:"0", display:"flex",justifyContent:"center", alignItems:"center", fontWeight:"bold", fontSize:"12px",  width:"100%", backgroundColor:"#33363A" }}> 3 Months</div>
+                </div>
 
-            {/* 3rd item */}
-             <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-delay="200" data-aos-anchor="[data-aos-id-blocks]">
-            
-             <div style={{fontWeight:"bold",fontSize:"25px", borderRadius:"30px",display:"flex", justifyContent:"center",marginBottom:"15px", alignItems:"center"}}>40% APR</div>
-            
-              <h5 className="h5 mb-4">3 Months</h5>
-              <p className="text-lg text-gray-400 text-center">Stake your RVX tokens for a period of <span style={{fontWeight:"bold",color:"white"}}>3 months</span>  in a staking contract to help secure 
-              the Ravox network and receive a reward of <span style={{fontWeight:"bold", color:"white"}}>40%</span> of your staked tokens at the end of the <span style={{fontWeight:"bold", color:"white"}}>3-months</span>  period. </p>
-             <div style={{fontWeight:"bold",fontSize:"22px", height:"45px", width:"170px", borderRadius:"5px", backgroundColor:"#704094", display:"flex", justifyContent:"center",marginBottom:"20px",marginTop:"30px", alignItems:"center",cursor:"pointer"}} >SUBSCRIBE</div>
-            </div> 
+                <div
+                  style={{
+                    fontWeight: "bold",
+                    fontSize: "14px",
+                    height: "45px",
+                    borderRadius: "5px",
+                    backgroundColor: "#704094",
+                    display: "flex",
+                    justifyContent: "center",
+                    marginBottom: "5px",
+                    marginTop: "30px",
+                    alignItems: "center",
+                    cursor: "pointer",
+                    width: "100%",
+                  }}
+                >
+                  SUBSCRIBE
+                </div>
+              </div>
+            </div>
 
             {/* 4th item */}
             {/* <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-delay="300" data-aos-anchor="[data-aos-id-blocks]">
@@ -88,9 +314,7 @@ function FeaturesBlocks() {
               <h4 className="h4 mb-2">Instant Features</h4>
               <p className="text-lg text-gray-400 text-center">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.</p>
             </div> */}
-
           </div>
-
         </div>
       </div>
     </section>
