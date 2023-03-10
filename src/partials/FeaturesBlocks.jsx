@@ -1,6 +1,6 @@
 import React from "react";
 import zz from "../images/favicon.png";
-import { GiCheckMark } from "react-icons/Gi";
+import { GiCheckMark } from "react-icons/gi";
 
 function FeaturesBlocks() {
   return (
