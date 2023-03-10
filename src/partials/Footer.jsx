@@ -15,7 +15,7 @@ function Footer() {
             <ul className="flex mb-4 md:order-1 md:ml-4 md:mb-0">
               <li>
                 <Link
-                  to="#"
+                  to="https://Twitter.com/RavoxERC"
                   className="flex justify-center items-center text-purple-600  hover:text-gray-100  rounded-full transition duration-150 ease-in-out"
                   aria-label="Twitter"
                 >
@@ -31,9 +31,9 @@ function Footer() {
               
               <li className="ml-4">
                 <Link
-                  to="#"
+                  to="https://t.me/RAVOXerc"
                   className="flex justify-center items-center text-purple-600  hover:text-gray-100  rounded-full transition duration-150 ease-in-out"
-                  aria-label="Instagram"
+                  aria-label="Telegram"
                 >
                   
                   <svg
