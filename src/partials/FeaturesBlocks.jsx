@@ -4,7 +4,13 @@ import { GiCheckMark } from "react-icons/gi";
 
 function FeaturesBlocks() {
   function click(){
-alert("You don't have enough $Ravox to stake")
+    if(window.ethereum){
+      // Do something 
+      alert("You don't have enough $Ravox to stake")
+    }else{
+      alert("install metamask extension!!")
+    }
+
   }
 
   return (
