@@ -171,7 +171,7 @@ function Header() {
                   <Link to="/roadmap" className="font-medium w-full inline-flex items-center justify-center border border-transparent px-4 py-2 my-2 rounded-sm text-purple-700 hover:bg-white transition duration-150 ease-in-out" >Roadmap</Link>
                 </li>
               <li>
-                <Link to="/staking" className="btn-sm text-purple-600  hover:text-purple-600 hover:bg-white px-4 py-3 flex items-center transition duration-150 ease-in-out">Buy Now</Link>
+                <Link to="https://pancakeswap.finance/swap" className="btn-sm text-purple-600  hover:text-purple-600 hover:bg-white px-4 py-3 flex items-center transition duration-150 ease-in-out">Buy Now</Link>
               </li>
             
                 

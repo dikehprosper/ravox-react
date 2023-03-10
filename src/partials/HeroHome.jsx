@@ -50,7 +50,7 @@ function HeroHome() {
                 </a>
               </div></Link>
                 <div data-aos="fade-up" data-aos-delay="600">
-                <a className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4" href="#0">
+                <a className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4" href="https://pancakeswap.finance/swap">
                   Buy Now
                 </a>
               </div>
@@ -121,7 +121,7 @@ function HeroHome() {
                 </a>
               </div></Link>
               <div data-aos="fade-up" data-aos-delay="600">
-                <a className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4" href="#0">
+                <a className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4" href="https://pancakeswap.finance/swap">
                   Buy Now
                 </a>
               </div>
