@@ -80,15 +80,16 @@ function Header() {
               <li>
                 <Link to="" className="btn-sm text-purple-600 hover:text-white hover:bg-purple-600 px-4 py-3 flex items-center transition duration-150 ease-in-out">Connect</Link>
               </li>
-
+             
             </ul>
 
           </nav>
 
           {/* Mobile menu */}
-          <div className="md:hidden">
-
-            {/* Hamburger button */}
+          <div style={{ marginLeft:"85px",  color:"white", backgroundColor:"#704094", padding:"6px", borderRadius:"4px", fontWeight:'bold'}}>Connect </div>
+         
+          <div className="md:hidden flex align-start justify-center">
+          {/* Hamburger button */}
             <button ref={trigger} className={`hamburger ${mobileNavOpen && 'active'}`} aria-controls="mobile-nav" aria-expanded={mobileNavOpen} onClick={() => setMobileNavOpen(!mobileNavOpen)}>
               <span className="sr-only">Menu</span>
               <svg className="w-6 h-6 fill-current text-gray-300 hover:text-gray-200 transition duration-150 ease-in-out" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
