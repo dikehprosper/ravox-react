@@ -99,7 +99,7 @@ function FeaturesBlocks() {
                     width: "100%",
                   }}
                 >
-                  SUBSCRIBE
+                  STAKE NOW
                 </div>
               </div>
             </div>
@@ -184,7 +184,7 @@ function FeaturesBlocks() {
                     width: "100%",
                   }}
                 >
-                  SUBSCRIBE
+                STAKE NOW
                 </div>
               </div>
             </div>
@@ -270,7 +270,7 @@ function FeaturesBlocks() {
                     width: "100%",
                   }}
                 >
-                  SUBSCRIBE
+                  STAKE NOW
                 </div>
               </div>
             </div>
