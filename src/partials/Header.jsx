@@ -2,74 +2,37 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Dropdown from '../utils/Dropdown';
 import zz from '../images/favicon.png'
+import { ethers } from 'ethers';
 
 function Header() {
 
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
-  
-  const [errorMessage, setErrorMessage] = useState(null);
-  const [account, setAccount] = useState(null);
-  const [balance, setBalance] = useState(null);
+  const [account, setAccount] = useState(null)
 
+  async function connect() {
+    if (window.ethereum) {
+     await window.ethereum.request({ method: "eth_requestAccounts" });
+     window.web3 = new Web3(window.ethereum);
+     const account = web3.eth.accounts;
+     //Get the current MetaMask selected/active wallet
+     const walletAddress = account.givenProvider.selectedAddress;
+     console.log(`Wallet: ${walletAddress}`);
+     setAccount(walletAddress)
+    
+    } else {
+     console.log("No wallet");
+     alert("There was an issue connecting")
+    }
+  }
 
-  Balance: {balance} {balance ? "ETH" : null};
-  Account: {account};
-  {errorMessage ? (
-    <div variant="body1" color="red">
-      Error: {errorMessage}
-    </div>
-  ) : null};
 
  
   
 
-  console.log(balance);
-  console.log(account);
-  console.log(errorMessage);
 
-  useEffect(() => {
-    if (window.ethereum) {
-      window.ethereum.on("accountsChanged", accountsChanged);
-      window.ethereum.on("chainChanged", chainChanged);
-    }
-  }, []);
 
-  const connectHandler = async () => {
-    if (window.ethereum) {
-      try {
-        const res = await window.ethereum.request({
-          method: "eth_requestAccounts",
-        });
-        await accountChange(res[0]);
-      } catch (err) {
-        console.error(err);
-        setErrorMessage("There was a problem connecting to MetaMask");
-      }
-    } else {
-      alert("Install MetaMask!!");
-    }
-  };
 
-  const accountsChanged = async (newAccount) => {
-    setAccount(newAccount);
-    try {
-      const balance = await window.ethereum.request({
-        method: "eth_getBalance",
-        params: [newAccount.toString(), "latest"],
-      });
-      setBalance(ethers.utils.formatEther(balance));
-    } catch (err) {
-      console.error(err);
-      setErrorMessage("There was a problem connecting to MetaMask");
-    }
-  };
 
-  const chainChanged = () => {
-    setErrorMessage(null);
-    setAccount(null);
-    setBalance(null);
-  };
-    
 
   const trigger = useRef(null);
   const mobileNav = useRef(null);
@@ -108,7 +71,7 @@ function Header() {
   return (
     <header className="absolute w-full z-30">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-20, position-relative">
 
           {/* Site branding */}
           <div className="shrink-0 mr-4" >
@@ -143,8 +106,10 @@ function Header() {
 
           </nav>
 
+          <div style={{position:"absolute", top:"190px",left:"10px",right:"10px", fontSize:"12px", whiteSpace:"nowrap", fontWeight:"bold"} }>{account?(<><h3 style={{display:"flex",justifyContent:"center",marginTop:"20px", height:"1px"}}></h3> &nbsp; <div style={{display:"flex",justifyContent:"center",height:"1px"}}>{account}</div></>):(null)}</div>
+
           {/* Mobile menu */}
-          <div style={{ marginLeft:"85px",  color:"white", backgroundColor:"#704094", padding:"6px", borderRadius:"4px", fontWeight:'bold'}} onClick={connectHandler}>{ account? "Connected" : "Connect"} </div>
+          <div style={{ marginLeft:"85px",  color:"white", backgroundColor:"#704094", padding:"6px", borderRadius:"4px", fontWeight:'bold'}} onClick={connect}>{ account? "Connected" : "Connect"} </div>
          
           <div className="md:hidden flex align-start justify-center">
           {/* Hamburger button */}
