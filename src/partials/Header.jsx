@@ -65,17 +65,21 @@ function Header() {
             {/* Desktop sign in links */}
             <ul className="flex grow justify-end flex-wrap items-center">
             <li>
-                <Link to="" className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out">Home</Link>
+                <Link to="/" className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out">Home</Link>
               </li> 
              
              
               <li>
-                <Link to="" className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out">About</Link>
+                <Link to="/staking" className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out">Stake</Link>
               </li> 
               
-              {/* <li>
-                <Link to="" className="btn-sm text-purple-600 hover:text-white hover:bg-purple-600 px-4 py-3 flex items-center transition duration-150 ease-in-out">Stake</Link>
-              </li> */}
+               <li>
+                <Link to="/roadmap" className="btn-sm text-purple-600 hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out">Roadmap</Link>
+              </li> 
+
+              <li>
+                <Link to="" className="btn-sm text-purple-600 hover:text-white hover:bg-purple-600 px-4 py-3 flex items-center transition duration-150 ease-in-out">Connect</Link>
+              </li>
 
             </ul>
 
@@ -98,17 +102,20 @@ function Header() {
             <nav id="mobile-nav" ref={mobileNav} className="absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out" style={mobileNavOpen ? { maxHeight: mobileNav.current.scrollHeight, opacity: 1 } : { maxHeight: 0, opacity: .8 } }>
               <ul className="bg-gray-800 px-4 py-2">
               <li>
-                  <Link to="exact" className="font-medium w-full inline-flex items-center justify-center border border-transparent px-4 py-2 my-2 rounded-sm text-white  hover:bg-purple-700 transition duration-150 ease-in-out" style={{color:"#704094"}}>Home</Link>
+                  <Link to="/" className="font-medium w-full inline-flex items-center justify-center border border-transparent px-4 py-2 my-2 rounded-sm text-purple-700  hover:bg-white transition duration-150 ease-in-out" >Home</Link>
                 </li>
                
                 <li>
-                  <Link to="" className="font-medium w-full inline-flex items-center justify-center border border-transparent px-4 py-2 my-2 rounded-sm text-white hover:bg-purple-700 transition duration-150 ease-in-out" style={{color:"#704094"}}>About</Link>
+                  <Link to="/staking" className="font-medium w-full inline-flex items-center justify-center border border-transparent px-4 py-2 my-2 rounded-sm text-purple-700 hover:bg-white transition duration-150 ease-in-out" >Stake</Link>
+                </li>
+                <li>
+                  <Link to="/roadmap" className="font-medium w-full inline-flex items-center justify-center border border-transparent px-4 py-2 my-2 rounded-sm text-purple-700 hover:bg-white transition duration-150 ease-in-out" >Roadmap</Link>
                 </li>
               <li>
-                <Link to="/staking" className="btn-sm text-purple-600  hover:text-white hover:bg-purple-600 px-4 py-3 flex items-center transition duration-150 ease-in-out"> Stake Now</Link>
+                <Link to="/staking" className="btn-sm text-purple-600  hover:text-purple-600 hover:bg-white px-4 py-3 flex items-center transition duration-150 ease-in-out">Buy Now</Link>
               </li>
               <li>
-                <Link to="" className="btn-sm text-white bg-gray-700 hover:bg-gray-800 hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"> Buy Now</Link>
+                <Link to="" className="btn-sm text-white bg-gray-700 hover:bg-gray-800 hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"> Connect</Link>
               </li>
                 
               </ul>

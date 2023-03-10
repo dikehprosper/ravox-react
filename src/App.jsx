@@ -15,6 +15,8 @@ import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import Staking from './pages/staking';
 
+import Roadmap from './pages/Roadmap';
+
 function App() {
 
   const location = useLocation();
@@ -41,6 +43,7 @@ function App() {
          <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/staking" element={<Staking />} /> 
+        <Route path="/roadmap" element={<Roadmap />} /> 
       </Routes>
     </>
   );

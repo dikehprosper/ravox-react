@@ -3,14 +3,15 @@ import React from 'react';
 import Header from '../partials/Header';
 import PageIllustration from '../partials/PageIllustration';
 import HeroHome from '../partials/HeroHome';
-import Features from '../partials/Features';
+import FeaturesBlocks from '../partials/FeaturesBlocks';
+import FeaturesBlocks2 from '../partials/Features';
 import FeaturesZigZag from '../partials/FeaturesZigzag';
 
 import Newsletter from '../partials/Newsletter';
 
 import Footer from '../partials/Footer';
 
-function Home() {
+function Roadmap() {
   return (
     <div className="flex flex-col min-h-screen overflow-hidden">
       {/*  Site header */}
@@ -22,11 +23,12 @@ function Home() {
         <div className="relative max-w-6xl mx-auto h-0 pointer-events-none" aria-hidden="true">
           <PageIllustration />
         </div>
-
-        {/*  Page sections */}
-         <HeroHome />
-         <Features /> 
-        {/* <FeaturesZigZag />  */}
+        <div style={{marginTop:"60px"}}>
+        <FeaturesZigZag />
+         </div>
+          
+         {/* <FeaturesBlocks2 /> */}
+        
       
         <Newsletter />  
       </main>
@@ -39,4 +41,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Roadmap;
