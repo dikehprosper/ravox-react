@@ -46,7 +46,7 @@ function Header() {
         setErrorMessage("There was a problem connecting to MetaMask");
       }
     } else {
-      setErrorMessage("Install MetaMask");
+      alert("Install MetaMask");
     }
   };
 
