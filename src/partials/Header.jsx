@@ -8,7 +8,8 @@ import { Web3Modal } from '@web3modal/react'
 import { configureChains, createClient, WagmiConfig } from 'wagmi'
 import { arbitrum, mainnet, polygon } from 'wagmi/chains'
 import { Web3Button } from '@web3modal/react'
-import { useWeb3ModalTheme } from '@web3modal/react'
+// import { useWeb3ModalTheme } from '@web3modal/react'
+
 
 
 function Header() {
@@ -32,22 +33,24 @@ function Header() {
   //   }
   // }
 
- 
+  
 
-const { theme, setTheme } = useWeb3ModalTheme();
+// const { theme, setTheme } = useWeb3ModalTheme()
 
-// Modal's theme object
-theme
+// // Modal's theme object
+// theme
 
-// Set modal theme
-setTheme({
-  themeMode: 'dark',
-  themeVariables: {
-    '--w3m-font-family': 'Roboto, sans-serif',
-    '--w3m-accent-color': '#704094'
-    // ...
-  }
-})
+// // Set modal theme
+// setTheme({
+//   themeMode: 'dark',
+//   themeVariables: {
+//     '--w3m-font-family': 'Roboto, sans-serif',
+//     '--w3m-accent-color': '#704094'
+//     // ...
+//   }
+// })
+
+  
 
 
   const chains = [arbitrum, mainnet, polygon]
@@ -142,8 +145,12 @@ setTheme({
 
   
           {/* Mobile menu */}
-          <div style={{ marginLeft:"85px",  color:"white",  padding:"6px", borderRadius:"4px", fontWeight:'bold'}} >       <WagmiConfig client={wagmiClient}>
-        <Web3Button />
+          <div style={{ marginLeft:"85px",  color:"white", backgroundColor:"transparent", padding:"6px", borderRadius:"4px", fontWeight:'bold'}} >       <WagmiConfig client={wagmiClient}>
+        <Web3Button 
+         themeVariables={{
+          '--w3m-font-family': 'Roboto, sans-serif',
+          '--w3m-accent-color': '#FFFFFF'
+        }}/>
       </WagmiConfig>
 
       <Web3Modal projectId={projectId} ethereumClient={ethereumClient} /></div>

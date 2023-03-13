@@ -12,6 +12,7 @@ function FeaturesBlocks() {
     }
 
   }
+  
 
   return (
     <section>
@@ -93,6 +94,31 @@ function FeaturesBlocks() {
                     ClipPath:
                       "polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0)", left:"0", top:"0",bottom:"0", display:"flex",fontSize:"12px", justifyContent:"center", alignItems:"center", fontWeight:"bold",  width:"100%", backgroundColor:"#33363A" }}> 7 Days</div>
                 </div>
+                <p style={{ fontSize: "10px", fontWeight: "bold", marginTop:"15px" }}>Stake Amount</p>
+               
+               <div
+                 style={{
+                   position: "relative",
+                   width: "180px",
+                   height: "35px",
+                   backgroundColor: "#704094",
+                   marginTop: "10px",
+                   display: "flex",
+                   justifyContent: "end",
+                   paddingRight:"2.5px",
+                   paddingTop:"2.5px",
+                   borderRadius: "4px",
+                   
+                 }}
+               >
+                
+         
+                 <input type="text" placeholder="Enter stake amount" style={{ position: "absolute",borderRadius: "4px",border:"1.5px solid #704094", WebkitClipPath:
+                     "polygon(0 0, 0 100%, 100% 100%, 100% 40%, 75% 0)",
+                   ClipPath:
+                     "polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0)", left:"0", top:"0",bottom:"0", display:"flex",fontSize:"12px", justifyContent:"center", alignItems:"center", fontWeight:"bold",  width:"100%", backgroundColor:"#33363A" }}/>
+               
+               </div>
                 <div
                   style={{
                     fontWeight: "bold",
@@ -178,7 +204,36 @@ function FeaturesBlocks() {
                       "polygon(0 0, 0 100%, 100% 100%, 100% 40%, 75% 0)",
                     ClipPath:
                       "polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0)", left:"0", top:"0",bottom:"0", display:"flex",fontSize:"12px", justifyContent:"center", alignItems:"center", fontWeight:"bold",  width:"100%", backgroundColor:"#33363A" }}> 30 Days</div>
+                 
                 </div>
+                <p style={{ fontSize: "10px", fontWeight: "bold", marginTop:"15px" }}>Stake Amount</p>
+               
+                <div
+                  style={{
+                    position: "relative",
+                    width: "180px",
+                    height: "35px",
+                    backgroundColor: "#704094",
+                    marginTop: "10px",
+                    display: "flex",
+                    justifyContent: "end",
+                    paddingRight:"2.5px",
+                    paddingTop:"2.5px",
+                    borderRadius: "4px",
+                    
+                  }}
+                >
+                 
+          
+                  <input type="text" placeholder="Enter stake amount" style={{ position: "absolute",borderRadius: "4px",border:"1.5px solid #704094", WebkitClipPath:
+                      "polygon(0 0, 0 100%, 100% 100%, 100% 40%, 75% 0)",
+                    ClipPath:
+                      "polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0)", left:"0", top:"0",bottom:"0", display:"flex",fontSize:"12px", justifyContent:"center", alignItems:"center", fontWeight:"bold",  width:"100%", backgroundColor:"#33363A" }}/>
+                
+                </div>
+               
+
+               
                 <div
                   style={{
                     fontWeight: "bold",
@@ -265,6 +320,31 @@ function FeaturesBlocks() {
                     ClipPath:
                       "polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0)", left:"0", top:"0",bottom:"0", display:"flex",justifyContent:"center", alignItems:"center", fontWeight:"bold", fontSize:"12px",  width:"100%", backgroundColor:"#33363A" }}> 3 Months</div>
                 </div>
+                <p style={{ fontSize: "10px", fontWeight: "bold", marginTop:"15px" }}>Stake Amount</p>
+               
+               <div
+                 style={{
+                   position: "relative",
+                   width: "180px",
+                   height: "35px",
+                   backgroundColor: "#704094",
+                   marginTop: "10px",
+                   display: "flex",
+                   justifyContent: "end",
+                   paddingRight:"2.5px",
+                   paddingTop:"2.5px",
+                   borderRadius: "4px",
+                   
+                 }}
+               >
+                
+         
+                 <input type="text" placeholder="Enter stake amount" style={{ position: "absolute",borderRadius: "4px",border:"1.5px solid #704094", WebkitClipPath:
+                     "polygon(0 0, 0 100%, 100% 100%, 100% 40%, 75% 0)",
+                   ClipPath:
+                     "polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0)", left:"0", top:"0",bottom:"0", display:"flex",fontSize:"12px", justifyContent:"center", alignItems:"center", fontWeight:"bold",  width:"100%", backgroundColor:"#33363A" }}/>
+               
+               </div>
 
                 <div
                   style={{
