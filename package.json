@@ -1,10 +1,10 @@
 {
-  "Homepage":" https://dikehprosper.github.io/ravox-react",
+  "Homepage": " https://dikehprosper.github.io/ravox-react",
   "name": "open-pro-react",
   "version": "0.1.0",
   "scripts": {
     "dev": "vite",
-    "predeploy":"npm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build": "vite build",
     "preview": "vite preview"
@@ -18,7 +18,8 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
     "react-router-dom": "^6.8.1",
-    "react-transition-group": "^4.4.5"
+    "react-transition-group": "^4.4.5",
+    "web3": "^1.8.2"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^3.1.0",
