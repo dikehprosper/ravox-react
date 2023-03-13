@@ -3,50 +3,31 @@ import { Link } from 'react-router-dom';
 import Dropdown from '../utils/Dropdown';
 import zz from '../images/favicon.png'
 import { ethers } from 'ethers';
-import Web3 from "web3";
-
-const web3 = new Web3(window.ethereum);
 
 function Header() {
 
-   const [mobileNavOpen, setMobileNavOpen] = useState(false);
-   const [account, setAccount] = useState(null)
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const [account, setAccount] = useState(null)
 
-  // async function connect() {
-  //   if (window.ethereum) {
-  //    await window.ethereum.request({ method: "eth_requestAccounts" });
-  //    window.web3 = new Web3(window.ethereum);
-  //    const account = web3.eth.accounts;
-  //    //Get the current MetaMask selected/active wallet
-  //    const walletAddress = account.givenProvider.selectedAddress;
-  //    console.log(`Wallet: ${walletAddress}`);
-  //    setAccount(walletAddress)
+  async function connect() {
+    if (window.ethereum) {
+     await window.ethereum.request({ method: "eth_requestAccounts" });
+     window.web3 = new Web3(window.ethereum);
+     const account = web3.eth.accounts;
+     //Get the current MetaMask selected/active wallet
+     const walletAddress = account.givenProvider.selectedAddress;
+     console.log(`Wallet: ${walletAddress}`);
+     setAccount(walletAddress)
     
-  //   } else {
-  //    console.log("No wallet");
-  //    alert("There was an issue connecting")
-  //   }
-  // }
+    } else {
+     console.log("No wallet");
+     alert("There was an issue connecting")
+    }
+  }
 
 
-
-// Initialize Web3.js with the MetaMask provider
-const web3 = new Web3(window.ethereum);
-
-// Request the user's accounts
-async function getAccount() {
-  const accounts = await window.ethereum.request({ method: "eth_requestAccounts" });
-  setAccount(accounts[0]);
-}
-
-
-console.log(`User account: ${account}`);
-
-
-
-
-
-
+ 
+  
 
 
 
@@ -125,10 +106,10 @@ console.log(`User account: ${account}`);
 
           </nav>
 
-          <div style={{position:"absolute", top:"40px",left:"10px",right:"10px", fontSize:"12px", whiteSpace:"nowrap", fontWeight:"bold"} }>{account?(<><h3 style={{display:"flex",justifyContent:"center",marginTop:"20px", height:"1px"}}></h3> &nbsp; <div style={{display:"flex",justifyContent:"center",height:"1px"}}>{`Address : ${account}`}</div></>):(null)}</div>
+          <div style={{position:"absolute", top:"190px",left:"10px",right:"10px", fontSize:"12px", whiteSpace:"nowrap", fontWeight:"bold"} }>{account?(<><h3 style={{display:"flex",justifyContent:"center",marginTop:"20px", height:"1px"}}></h3> &nbsp; <div style={{display:"flex",justifyContent:"center",height:"1px"}}>{account}</div></>):(null)}</div>
 
           {/* Mobile menu */}
-          <div style={{ marginLeft:"85px",  color:"white", backgroundColor:"#704094", padding:"6px", borderRadius:"4px", fontWeight:'bold'}} onClick={getAccount}>{ account? "Connected" : "Connect"} </div>
+          <div style={{ marginLeft:"85px",  color:"white", backgroundColor:"#704094", padding:"6px", borderRadius:"4px", fontWeight:'bold'}} onClick={connect}>{ account? "Connected" : "Connect"}  <a href="https://metamask.app.link/dapp/www.ravox.org/">fff</a></div>
          
           <div className="md:hidden flex align-start justify-center">
           {/* Hamburger button */}
