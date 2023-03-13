@@ -8,7 +8,7 @@ function FeaturesBlocks() {
       // Do something 
       alert("You don't have enough $Ravox to stake")
     }else{
-      alert("install metamask!!")
+      alert("You don't have enough $Ravox to stake!!")
     }
 
   }
