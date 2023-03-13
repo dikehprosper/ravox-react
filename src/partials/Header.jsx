@@ -3,29 +3,63 @@ import { Link } from 'react-router-dom';
 import Dropdown from '../utils/Dropdown';
 import zz from '../images/favicon.png'
 import { ethers } from 'ethers';
+import { EthereumClient, w3mConnectors, w3mProvider } from '@web3modal/ethereum'
+import { Web3Modal } from '@web3modal/react'
+import { configureChains, createClient, WagmiConfig } from 'wagmi'
+import { arbitrum, mainnet, polygon } from 'wagmi/chains'
+import { Web3Button } from '@web3modal/react'
+import { useWeb3ModalTheme } from '@web3modal/react'
+
 
 function Header() {
 
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
-  const [account, setAccount] = useState(null)
+  // const [account, setAccount] = useState(null)
 
-  async function connect() {
-    if (window.ethereum) {
-     await window.ethereum.request({ method: "eth_requestAccounts" });
-     window.web3 = new Web3(window.ethereum);
-     const account = web3.eth.accounts;
-     //Get the current MetaMask selected/active wallet
-     const walletAddress = account.givenProvider.selectedAddress;
-     console.log(`Wallet: ${walletAddress}`);
-     setAccount(walletAddress)
+  // async function connect() {
+  //   if (window.ethereum) {
+  //    await window.ethereum.request({ method: "eth_requestAccounts" });
+  //    window.web3 = new Web3(window.ethereum);
+  //    const account = web3.eth.accounts;
+  //    //Get the current MetaMask selected/active wallet
+  //    const walletAddress = account.givenProvider.selectedAddress;
+  //    console.log(`Wallet: ${walletAddress}`);
+  //    setAccount(walletAddress)
     
-    } else {
-     console.log("No wallet");
-     alert("There was an issue connecting")
-    }
+  //   } else {
+  //    console.log("No wallet");
+  //    alert("we would proceed to connect to meta-mask")
+  //   }
+  // }
+
+ 
+
+const { theme, setTheme } = useWeb3ModalTheme();
+
+// Modal's theme object
+theme
+
+// Set modal theme
+setTheme({
+  themeMode: 'dark',
+  themeVariables: {
+    '--w3m-font-family': 'Roboto, sans-serif',
+    '--w3m-accent-color': '#704094'
+    // ...
   }
+})
 
 
+  const chains = [arbitrum, mainnet, polygon]
+  const projectId = 'd724049e3cb9c9fdf9ac761f6142f3fe'
+  
+  const { provider } = configureChains(chains, [w3mProvider({ projectId })])
+  const wagmiClient = createClient({
+    autoConnect: true,
+    connectors: w3mConnectors({ projectId, version: 1, chains }),
+    provider
+  })
+  const ethereumClient = new EthereumClient(wagmiClient, chains)
  
   
 
@@ -106,10 +140,13 @@ function Header() {
 
           </nav>
 
-          <div style={{position:"absolute", top:"190px",left:"10px",right:"10px", fontSize:"12px", whiteSpace:"nowrap", fontWeight:"bold"} }>{account?(<><h3 style={{display:"flex",justifyContent:"center",marginTop:"20px", height:"1px"}}></h3> &nbsp; <div style={{display:"flex",justifyContent:"center",height:"1px"}}>{account}</div></>):(null)}</div>
-
+  
           {/* Mobile menu */}
-          <div style={{ marginLeft:"85px",  color:"white", backgroundColor:"#704094", padding:"6px", borderRadius:"4px", fontWeight:'bold'}} onClick={connect}>{ account? "Connected" : "Connect"}  <a href="https://metamask.app.link/dapp/www.ravox.org/">fff</a></div>
+          <div style={{ marginLeft:"85px",  color:"white",  padding:"6px", borderRadius:"4px", fontWeight:'bold'}} >       <WagmiConfig client={wagmiClient}>
+        <Web3Button />
+      </WagmiConfig>
+
+      <Web3Modal projectId={projectId} ethereumClient={ethereumClient} /></div>
          
           <div className="md:hidden flex align-start justify-center">
           {/* Hamburger button */}
