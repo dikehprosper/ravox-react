@@ -22,6 +22,7 @@ function FeaturesBlocks() {
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
             <h2 className="h2 mb-4">Staking Plans</h2>
             <h5 className="h5 mb-4">Select percentage APR</h5>
+           
           </div>
 
           {/* Items */}

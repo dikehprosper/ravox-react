@@ -1,4 +1,6 @@
 import React from 'react';
+import zzz from "../Whitepaper.pdf";
+import { BsArrowRight } from "react-icons/bs";
 
 function Newsletter() {
 
@@ -41,8 +43,13 @@ function Newsletter() {
 
             {/* CTA content */}
             <div className="mb-6 lg:mr-16 lg:mb-0 text-center lg:text-left lg:w-1/2">
-              <h3 className="h3 text-white mb-2">Whitepaper  <span className="h6 text-white mb-4">coming soon!</span></h3>
-              <p className="text-purple-200 text-lg">Join our newsletter to get notified when out </p>
+            
+             
+
+              <a className="btn text-white bg-purple-600 hover:bg-purple-1000 w-full mb-20 sm:w-auto sm:mb-0" href={zzz} >
+              <h2 style={{fontSize:"32px", marginBottom:"3px", display:"flex", justifyContent:"center", alignItems:"center", gap:"10px"}}>     View Whitepaper <BsArrowRight />
+              </h2> </a>  
+              <p className="text-purple-200 text-lg">Also Join our newsletter to get notified on new updates </p>
             </div>
 
             {/* CTA form */}

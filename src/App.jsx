@@ -44,6 +44,7 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/staking" element={<Staking />} /> 
         <Route path="/roadmap" element={<Roadmap />} /> 
+        
       </Routes>
     </>
   );
