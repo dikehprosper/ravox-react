@@ -16,3 +16,5 @@ npm run dev
 ```
 npm run build
 ```
+
+A crypto staking based website that connects web3 wallets created with vite-react  and tailwindcss.
